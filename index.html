@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mufti Mohammad Amin — Técnico en Sistemas y Redes</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts: Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Theme Configuration -->
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        dark: {
+                            bg: '#0d0f12',
+                            surface: '#13161c',
+                            card: '#1a1e26',
+                            cardHover: '#222733',
+                            border: 'rgba(255, 255, 255, 0.08)',
+                            borderHover: 'rgba(0, 242, 254, 0.3)'
+                        },
+                        accent: {
+                            cyan: '#00f2fe',
+                            teal: '#4facfe',
+                            emerald: '#10b981',
+                            purple: '#a855f7'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Inter"', 'sans-serif'],
+                        mono: ['"JetBrains Mono"', 'monospace']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Hoja de Estilos Personalizada -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-dark-bg text-slate-200 selection:bg-accent-cyan selection:text-dark-bg relative">
+
+    <!-- Ambient Grid Overlay -->
+    <div class="fixed inset-0 bg-grid-pattern pointer-events-none z-0"></div>
+
+    <!-- 1. BARRA DE NAVEGACION -->
+    <nav class="fixed top-0 left-0 w-full z-50 glass-nav px-6 py-4">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <a href="#" class="font-mono-code font-bold text-lg text-white hover:text-accent-cyan transition-colors flex items-center gap-2">
+                <span class="text-accent-cyan">&lt;</span>MMA <span class="text-accent-teal">/&gt;</span>
+            </a>
+
+            <ul class="hidden md:flex items-center space-x-8 font-mono-code text-xs tracking-wider">
+                <li><a href="#inicio" class="nav-link text-slate-400 hover:text-accent-cyan transition-colors"><span class="text-accent-cyan">//</span> 01. inicio</a></li>
+                <li><a href="#especialidad" class="nav-link text-slate-400 hover:text-accent-cyan transition-colors"><span class="text-accent-cyan">//</span> 02. especialidad</a></li>
+                <li><a href="#experiencia" class="nav-link text-slate-400 hover:text-accent-cyan transition-colors"><span class="text-accent-cyan">//</span> 03. experiencia</a></li>
+                <li><a href="#formacion" class="nav-link text-slate-400 hover:text-accent-cyan transition-colors"><span class="text-accent-cyan">//</span> 04. formación</a></li>
+                <li><a href="#contacto" class="nav-link text-slate-400 hover:text-accent-cyan transition-colors"><span class="text-accent-cyan">//</span> 05. contacto</a></li>
+            </ul>
+
+            <a href="#contacto" class="font-mono-code text-xs px-4 py-2 rounded bg-accent-cyan/10 border border-accent-cyan/40 text-accent-cyan hover:bg-accent-cyan hover:text-dark-bg font-semibold transition-all">
+                contactar()
+            </a>
+        </div>
+    </nav>
+
+    <!-- 2. TERMINAL -->
+    <section id="inicio" class="min-h-screen pt-32 pb-20 px-6 flex items-center relative z-10">
+        <div class="max-w-6xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            
+            <div class="lg:col-span-7 space-y-6">
+                <div class="inline-flex items-center gap-3 px-3.5 py-1.5 rounded-full bg-accent-emerald/10 border border-accent-emerald/30 text-accent-emerald font-mono-code text-xs">
+                    <span class="w-2.5 h-2.5 rounded-full bg-accent-emerald pulse-emerald"></span>
+                    <span>Disponible para oportunidades laborales en TI</span>
+                </div>
+
+                <div class="space-y-2">
+                    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-white">
+                        Mufti Mohammad <span class="text-gradient-cyan">Amin</span>
+                    </h1>
+                    <h2 class="text-lg sm:text-2xl font-mono-code text-accent-teal font-medium">
+                        Técnico en Sistemas Microinformáticos y Redes (SMR)
+                    </h2>
+                </div>
+
+                <div class="bg-dark-card border border-dark-border rounded-xl p-4 sm:p-5 font-mono-code text-xs sm:text-sm shadow-2xl cyan-glow">
+                    <div class="flex items-center justify-between pb-3 mb-3 border-b border-dark-border/60 text-slate-500">
+                        <div class="flex items-center gap-2">
+                            <span class="w-3 h-3 rounded-full bg-red-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/80 inline-block"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/80 inline-block"></span>
+                        </div>
+                        <span class="text-slate-400 text-xs">mufti@smr-sysadmin: ~</span>
+                    </div>
+
+                    <div class="space-y-2 text-slate-300">
+                        <p><span class="text-accent-cyan">mufti@smr-sysadmin:~$</span> cat perfil.txt</p>
+                        <div class="pl-4 text-slate-400">
+                            <p>{</p>
+                            <p class="pl-4"><span class="text-accent-teal">"ubicacion"</span>: <span class="text-emerald-400">"Valencia, España"</span>,</p>
+                            <p class="pl-4"><span class="text-accent-teal">"estudios"</span>: <span class="text-emerald-400">"IES Serpis (Técnico SMR - 2º Curso)"</span>,</p>
+                            <p class="pl-4"><span class="text-accent-teal">"habilidades_clave"</span>: [<span class="text-emerald-400">"DHCP/DNS"</span>, <span class="text-emerald-400">"Docker"</span>, <span class="text-emerald-400">"Incus"</span>, <span class="text-emerald-400">"SQL"</span>, <span class="text-emerald-400">"Python"</span>],</p>
+                            <p class="pl-4"><span class="text-accent-teal">"practicas_colegio"</span>: <span class="text-emerald-400">"Reparación de PC, soporte a docentes y gestión de BBDD"</span></p>
+                            <p>}</p>
+                        </div>
+                        <p class="pt-2"><span class="text-accent-cyan">mufti@smr-sysadmin:~$</span> <span id="terminal-typed"></span><span class="terminal-cursor"></span></p>
+                    </div>
+                </div>
+
+                <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                    Especializado en el despliegue de infraestructuras informáticas, reparación de equipos, asistencia técnica a usuarios y docentes, configuración de servicios de red (DHCP/DNS) y virtualización con contenedores.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-2 font-mono-code text-xs sm:text-sm">
+                    <a href="#experiencia" class="px-6 py-3 rounded bg-accent-cyan/10 border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-dark-bg transition-all font-semibold flex items-center gap-2">
+                        <i class="fa-solid fa-briefcase"></i> Ver Experiencia
+                    </a>
+                    <a href="#especialidad" class="px-6 py-3 rounded bg-dark-card border border-dark-border text-slate-300 hover:border-slate-400 hover:text-white transition-all flex items-center gap-2">
+                        <i class="fa-solid fa-code"></i> Conocimientos Técnicos
+                    </a>
+                </div>
+            </div>
+
+            <div class="lg:col-span-5 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 rounded-2xl bg-gradient-to-r from-accent-cyan to-accent-teal opacity-30 group-hover:opacity-70 blur transition duration-500"></div>
+                    
+                    <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-2xl bg-dark-card border border-dark-border overflow-hidden flex items-center justify-center">
+                        <img src="foto.jpg" alt="Mufti Mohammad Amin" 
+                             class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                             onerror="this.onerror=null; this.parentNode.innerHTML='<div class=\'text-center p-6 font-mono-code\'><i class=\'fa-solid fa-user-shield text-6xl text-accent-cyan mb-4\'></i><p class=\'text-sm text-white font-bold\'>Mufti Mohammad Amin</p><p class=\'text-xs text-accent-teal mt-1\'>Técnico en Sistemas y Redes</p></div>';">
+                    </div>
+
+                    <div class="absolute -bottom-4 -right-4 bg-dark-card border border-dark-border rounded-lg px-4 py-2 font-mono-code text-xs text-accent-cyan flex items-center gap-2 shadow-2xl">
+                        <i class="fa-solid fa-circle-check text-accent-emerald"></i>
+                        <span>FP SMR IES Serpis</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. ESPECIALIDADES -->
+    <section id="especialidad" class="py-24 px-6 bg-dark-surface/50 border-t border-dark-border relative z-10">
+        <div class="max-w-6xl mx-auto space-y-12 reveal">
+            <div class="space-y-2">
+                <p class="font-mono-code text-accent-cyan text-xs tracking-widest">// 02. ESPECIALIDAD</p>
+                <h2 class="text-3xl font-extrabold text-white">Conocimientos Técnicos y Habilidades</h2>
+                <p class="text-slate-400 text-sm max-w-xl">
+                    Dominio práctico en administración de servidores, virtualización de aplicaciones, redes estructuradas y soporte directo a usuarios.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-dark-card border border-dark-border rounded-xl p-6 cyan-glow-hover transition-all space-y-4">
+                    <div class="w-12 h-12 rounded-lg bg-accent-cyan/10 border border-accent-cyan/30 flex items-center justify-center text-accent-cyan text-xl">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Servidores y Redes</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Despliegue y administración de servidores esenciales en Linux y Windows.
+                    </p>
+                    <ul class="text-xs font-mono-code text-slate-300 space-y-1.5 pt-2 border-t border-dark-border">
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Servidores DHCP (Linux/Win)</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Servidores DNS (BIND/Win)</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Contenedores Docker e Incus</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Cableado de Red y Crimpado</li>
+                    </ul>
+                </div>
+
+                <div class="bg-dark-card border border-dark-border rounded-xl p-6 cyan-glow-hover transition-all space-y-4">
+                    <div class="w-12 h-12 rounded-lg bg-accent-cyan/10 border border-accent-cyan/30 flex items-center justify-center text-accent-cyan text-xl">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Sistemas y Hardware</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Mantenimiento, reparación de componentes e instalación de sistemas operativos.
+                    </p>
+                    <ul class="text-xs font-mono-code text-slate-300 space-y-1.5 pt-2 border-t border-dark-border">
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Diagnóstico y Reparación PC</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Mantenimiento Preventivo</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Windows & Distribuciones Linux</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Configuración UEFI / BIOS</li>
+                    </ul>
+                </div>
+
+                <div class="bg-dark-card border border-dark-border rounded-xl p-6 cyan-glow-hover transition-all space-y-4">
+                    <div class="w-12 h-12 rounded-lg bg-accent-cyan/10 border border-accent-cyan/30 flex items-center justify-center text-accent-cyan text-xl">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Programación y Web</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Desarrollo web y scripting para automatización y personalización.
+                    </p>
+                    <ul class="text-xs font-mono-code text-slate-300 space-y-1.5 pt-2 border-t border-dark-border">
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Python</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> HTML5 & CSS3</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Maquetación Responsive</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Scripting básico</li>
+                    </ul>
+                </div>
+
+                <div class="bg-dark-card border border-dark-border rounded-xl p-6 cyan-glow-hover transition-all space-y-4">
+                    <div class="w-12 h-12 rounded-lg bg-accent-cyan/10 border border-accent-cyan/30 flex items-center justify-center text-accent-cyan text-xl">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Bases de Datos y Otros</h3>
+                    <p class="text-slate-400 text-xs leading-relaxed">
+                        Gestión de datos organizacionales y competencias interpersonales.
+                    </p>
+                    <ul class="text-xs font-mono-code text-slate-300 space-y-1.5 pt-2 border-t border-dark-border">
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> SQL & MySQL</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Microsoft Access</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Microsoft Excel Avanzado</li>
+                        <li><i class="fa-solid fa-angle-right text-accent-cyan mr-1"></i> Inglés (Comprensión Alta)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. MI EXPERIENCIA -->
+    <section id="experiencia" class="py-24 px-6 relative z-10">
+        <div class="max-w-6xl mx-auto space-y-10 reveal">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+                <div class="space-y-2">
+                    <p class="font-mono-code text-accent-cyan text-xs tracking-widest">// 03. EXPERIENCIA</p>
+                    <h2 class="text-3xl font-extrabold text-white">Experiencia y Prácticas</h2>
+                </div>
+
+                <div class="flex flex-wrap gap-2 font-mono-code text-xs">
+                    <button onclick="filterExperience('todos', event)" class="filter-btn active px-4 py-2 rounded-lg border border-dark-border text-slate-400 hover:text-white transition-all">
+                        Todos
+                    </button>
+                    <button onclick="filterExperience('colegio', event)" class="filter-btn px-4 py-2 rounded-lg border border-dark-border text-slate-400 hover:text-white transition-all">
+                        Soporte Colegio
+                    </button>
+                    <button onclick="filterExperience('sistemas', event)" class="filter-btn px-4 py-2 rounded-lg border border-dark-border text-slate-400 hover:text-white transition-all">
+                        Sistemas y Redes
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8">
+                <div class="exp-card colegio sistemas bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8 hover:border-accent-cyan/50 transition-all space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-dark-border pb-4">
+                        <div>
+                            <span class="font-mono-code text-xs font-bold px-3 py-1 rounded bg-accent-cyan/10 text-accent-cyan border border-accent-cyan/30 inline-block mb-2">
+                                Prácticas Formativas en un colegio
+                            </span>
+                            <h3 class="text-2xl font-bold text-white">Técnico de Soporte en CEIP Eliseo Vidal</h3>
+                            <p class="text-accent-teal font-mono-code text-xs mt-1">Centro Educativo / Colegio</p>
+                        </div>
+                        <span class="font-mono-code text-xs text-slate-400 shrink-0"><i class="fa-regular fa-calendar mr-1"></i> Periodo de Prácticas</span>
+                    </div>
+
+                    <p class="text-slate-300 text-sm leading-relaxed">
+                        Desempeño de funciones completas de mantenimiento preventivo y correctivo en el equipamiento informático del centro, ayuda técnica continuada a docentes y alumnos, y administración de la base de datos escolar.
+                    </p>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <div class="bg-dark-surface p-4 rounded-lg border border-dark-border/60">
+                            <h4 class="font-bold text-white text-xs mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-wrench text-accent-cyan"></i> Mantenimiento y Reparación
+                            </h4>
+                            <p class="text-xs text-slate-400">
+                                Diagnóstico, sustitución de componentes, puesta a punto y mantenimiento preventivo/correctivo de los ordenadores del colegio.
+                            </p>
+                        </div>
+
+                        <div class="bg-dark-surface p-4 rounded-lg border border-dark-border/60">
+                            <h4 class="font-bold text-white text-xs mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-chalkboard-user text-accent-cyan"></i> Soporte a Profesores y Alumnos
+                            </h4>
+                            <p class="text-xs text-slate-400">
+                                Ayuda técnica directa al profesorado y alumnado en el manejo de ordenadores, resolución de dudas y uso de herramientas informáticas.
+                            </p>
+                        </div>
+
+                        <div class="bg-dark-surface p-4 rounded-lg border border-dark-border/60">
+                            <h4 class="font-bold text-white text-xs mb-2 flex items-center gap-2">
+                                <i class="fa-solid fa-database text-accent-cyan"></i> Gestión de Base de Datos
+                            </h4>
+                            <p class="text-xs text-slate-400">
+                                Administración, actualización de información y mantenimiento continuo de la base de datos central del colegio.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-cyan border border-accent-cyan/20">#ReparacionEquipos</span>
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-cyan border border-accent-cyan/20">#SoporteDocentesAlumnos</span>
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-cyan border border-accent-cyan/20">#GestionBaseDatos</span>
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-cyan border border-accent-cyan/20">#SQL</span>
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-cyan border border-accent-cyan/20">#RedesLocal</span>
+                    </div>
+                </div>
+
+                <div class="exp-card sistemas bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8 hover:border-accent-cyan/50 transition-all space-y-6">
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-dark-border pb-4">
+                        <div>
+                            <span class="font-mono-code text-xs font-bold px-3 py-1 rounded bg-accent-teal/10 text-accent-teal border border-accent-teal/30 inline-block mb-2">
+                                Experiencia y Proyectos Técnicos
+                            </span>
+                            <h3 class="text-2xl font-bold text-white">Proyectos y Mantenimiento Técnico</h3>
+                            <p class="text-accent-teal font-mono-code text-xs mt-1">Servicios Técnicos e Informática</p>
+                        </div>
+                        <span class="font-mono-code text-xs text-slate-400 shrink-0"><i class="fa-regular fa-calendar mr-1"></i> 2019 - Actualidad</span>
+                    </div>
+
+                    <ul class="space-y-3 text-sm text-slate-300 list-disc list-inside">
+                        <li><strong>Asesoramiento y Presupuestos:</strong> Elaboración de presupuestos informáticos personalizados adaptados a las necesidades del usuario.</li>
+                        <li><strong>Soporte Técnico a Usuarios:</strong> Resolución de incidencias en sistemas operativos y capacitación en el uso de herramientas informáticas.</li>
+                        <li><strong>Mantenimiento y Montaje:</strong> Diagnóstico de averías, sustitución de componentes hardware, optimización de equipos y crimpado de red.</li>
+                        <li><strong>Servicios de Red:</strong> Creación y gestión de servidores DHCP (Linux/Windows Server), DNS (BIND/Win DNS) y contenedores Docker / Incus.</li>
+                    </ul>
+
+                    <div class="flex flex-wrap gap-2 pt-2">
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-teal border border-accent-teal/20">#ServidoresDHCP</span>
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-teal border border-accent-teal/20">#DNS</span>
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-teal border border-accent-teal/20">#Docker</span>
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-teal border border-accent-teal/20">#Incus</span>
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-teal border border-accent-teal/20">#Python</span>
+                        <span class="font-mono-code text-[11px] px-2.5 py-1 rounded bg-dark-surface text-accent-teal border border-accent-teal/20">#HTML_CSS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. FORMACION -->
+    <section id="formacion" class="py-16 px-6 bg-dark-surface/30 relative z-10 border-t border-dark-border">
+        <div class="max-w-6xl mx-auto space-y-6 reveal">
+            <p class="font-mono-code text-accent-cyan text-xs tracking-widest">// 04. FORMACIÓN ACADÉMICA</p>
+            
+            <div class="bg-dark-card border border-dark-border rounded-xl p-6 sm:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+                <div class="flex items-center gap-5">
+                    <div class="w-14 h-14 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-2xl shrink-0">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-white">Técnico en Sistemas Microinformáticos y Redes (SMR)</h3>
+                        <p class="text-accent-teal font-mono-code text-xs mt-1">IES Serpis (Valencia)</p>
+                    </div>
+                </div>
+                <div class="font-mono-code text-xs text-slate-400 bg-dark-surface px-4 py-2 rounded-lg border border-dark-border">
+                    <i class="fa-regular fa-clock text-accent-cyan mr-1.5"></i> 2025 – Actualidad (Segundo Curso)
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. CONTACTO -->
+    <footer id="contacto" class="py-24 px-6 border-t border-dark-border relative z-10">
+        <div class="max-w-4xl mx-auto text-center space-y-10 reveal">
+            <div class="space-y-3">
+                <p class="font-mono-code text-accent-cyan text-xs tracking-widest">// 05. CONTACTO</p>
+                <h2 class="text-4xl sm:text-5xl font-extrabold text-white tracking-tight">¿Hablamos de un proyecto o puesto laboral?</h2>
+                <p class="text-slate-400 text-sm max-w-lg mx-auto leading-relaxed">
+                    Estoy disponible e interesado en incorporarme como Técnico de Soporte Informático, Administrador de Redes o Técnico de Infraestructura. ¡Ponte en contacto conmigo!
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-xl mx-auto text-left">
+                <a href="mailto:mufmohami@gmail.com" class="p-5 rounded-xl bg-dark-card border border-dark-border hover:border-accent-cyan transition-all flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-lg bg-accent-cyan/10 text-accent-cyan flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-envelope"></i>
+                    </div>
+                    <div class="overflow-hidden">
+                        <p class="text-[10px] font-mono-code text-slate-400">CORREO ELECTRÓNICO</p>
+                        <p class="text-xs font-bold text-white group-hover:text-accent-cyan transition-colors truncate">mufmohami@gmail.com</p>
+                    </div>
+                </a>
+
+                <a href="tel:+34722379155" class="p-5 rounded-xl bg-dark-card border border-dark-border hover:border-accent-cyan transition-all flex items-center gap-4 group">
+                    <div class="w-12 h-12 rounded-lg bg-accent-cyan/10 text-accent-cyan flex items-center justify-center text-xl shrink-0 group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-phone"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-mono-code text-slate-400">TELÉFONO DE CONTACTO</p>
+                        <p class="text-xs font-bold text-white group-hover:text-accent-cyan transition-colors">(+34) 722 379 155</p>
+                    </div>
+                </a>
+            </div>
+
+            <div>
+                <button onclick="copyToClipboard('mufmohami@gmail.com')" class="font-mono-code text-xs px-6 py-3 rounded-lg bg-accent-cyan/10 border border-accent-cyan text-accent-cyan hover:bg-accent-cyan hover:text-dark-bg font-bold transition-all shadow-xl">
+                    <i class="fa-regular fa-copy mr-2"></i> Copiar Dirección de Correo
+                </button>
+            </div>
+
+            <div class="pt-16 border-t border-dark-border/40 font-mono-code text-xs text-slate-500 flex flex-col sm:flex-row items-center justify-between gap-4">
+                <p>Diseñado y Desarrollado por <span class="text-accent-cyan">Mufti Mohammad Amin</span></p>
+                <p>Valencia, España</p>
+                <p>&copy; 2026 Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Interactive Toast Notification -->
+    <div id="toast-notify" class="fixed bottom-6 right-6 font-mono-code text-xs px-4 py-3 rounded-xl bg-accent-cyan text-dark-bg font-bold shadow-2xl transition-all duration-300 opacity-0 pointer-events-none translate-y-4 z-50 flex items-center gap-2">
+        <i class="fa-solid fa-circle-check"></i>
+        <span id="toast-text">Correo copiado al portapapeles</span>
+    </div>
+
+    <!-- Archivo JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
