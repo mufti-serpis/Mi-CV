@@ -36,7 +36,25 @@ function typeTerminal() {
     setTimeout(typeTerminal, speed);
 }
 
-// 2. Scroll Reveal Engine
+// 2. Control del Menú Desplegable Móvil
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const menuIcon = document.getElementById('menu-icon');
+
+    if (!mobileMenu || !menuIcon) return;
+
+    mobileMenu.classList.toggle('hidden');
+    
+    if (mobileMenu.classList.contains('hidden')) {
+        menuIcon.classList.remove('fa-xmark');
+        menuIcon.classList.add('fa-bars');
+    } else {
+        menuIcon.classList.remove('fa-bars');
+        menuIcon.classList.add('fa-xmark');
+    }
+}
+
+// 3. Scroll Reveal Engine
 function setupScrollReveal() {
     const reveals = document.querySelectorAll('.reveal');
 
@@ -54,7 +72,7 @@ function setupScrollReveal() {
     checkReveal();
 }
 
-// 3. Category Filter for Work Experience
+// 4. Category Filter for Work Experience
 function filterExperience(category, evt) {
     const buttons = document.querySelectorAll('.filter-btn');
     const cards = document.querySelectorAll('.exp-card');
@@ -75,7 +93,7 @@ function filterExperience(category, evt) {
     });
 }
 
-// 4. Clipboard Action with Toast Notification
+// 5. Clipboard Action with Toast Notification
 function copyToClipboard(text) {
     navigator.clipboard.writeText(text).then(() => {
         const toast = document.getElementById('toast-notify');
@@ -94,4 +112,9 @@ function copyToClipboard(text) {
 document.addEventListener('DOMContentLoaded', () => {
     typeTerminal();
     setupScrollReveal();
+
+    const menuToggle = document.getElementById('menu-toggle');
+    if (menuToggle) {
+        menuToggle.addEventListener('click', toggleMobileMenu);
+    }
 });
